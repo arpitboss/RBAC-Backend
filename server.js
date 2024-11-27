@@ -35,6 +35,9 @@ server.use((req, res, next) => {
 });
 
 server.use(router);
-server.listen(5000, () => {
-    console.log('JSON Server is running on port 5000');
+
+// Use the dynamic PORT variable provided by hosting platforms
+const PORT = process.env.PORT || 5000;
+server.listen(PORT, () => {
+    console.log(`JSON Server is running on port ${PORT}`);
 });
