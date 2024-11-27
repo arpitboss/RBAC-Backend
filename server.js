@@ -7,7 +7,8 @@ server.use(middlewares);
 server.use(jsonServer.bodyParser);
 
 server.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', '*'); // Allow all origins
+    res.header('Access-Control-Allow-Origin', 'https://rbacui-gamma.vercel.app/'); // Replace with actual frontend URL
+ // Allow all origins
     res.header(
         'Access-Control-Allow-Headers',
         'Origin, X-Requested-With, Content-Type, Accept, Authorization, user-id'
