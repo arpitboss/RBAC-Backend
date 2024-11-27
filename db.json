@@ -1,6 +1,11 @@
 {
   "users": [],
-  "roles": [],
+  "roles": [
+    {
+      "id": "8794",
+      "name": "React Dev"
+    }
+  ],
   "permissions": [
     {
       "id": "1",

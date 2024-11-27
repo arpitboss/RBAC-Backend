@@ -6,6 +6,20 @@ const middlewares = jsonServer.defaults();
 server.use(middlewares);
 server.use(jsonServer.bodyParser);
 
+server.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*'); // Allow all origins
+    res.header(
+        'Access-Control-Allow-Headers',
+        'Origin, X-Requested-With, Content-Type, Accept, Authorization, user-id'
+    ); // Include necessary headers
+    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS'); // Allow HTTP methods
+    if (req.method === 'OPTIONS') {
+        return res.sendStatus(200); // Quickly handle preflight requests
+    }
+    next();
+});
+
+
 // Middleware for permission validation
 server.use((req, res, next) => {
     const db = router.db; // Get lowdb instance
