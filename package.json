@@ -1,47 +1,24 @@
 {
-  "name": "rbac-ui",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@ant-design/icons": "^5.5.1",
-    "@emotion/react": "^11.13.5",
-    "@emotion/styled": "^11.13.5",
-    "@mui/material": "^6.1.8",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "antd": "^5.22.2",
-    "axios": "^1.7.8",
-    "json-server": "^1.0.0-beta.3",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-router-dom": "^7.0.1",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
-  },
+  "name": "rbac-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "server": "json-server --host 0.0.0.0 --watch db.json --port 5000"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "json-server --host 0.0.0.0 --watch db.json --port 5000"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arpitboss/RBAC-Backend.git"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arpitboss/RBAC-Backend/issues"
+  },
+  "homepage": "https://github.com/arpitboss/RBAC-Backend#readme",
+  "dependencies": {
+    "json-server": "^1.0.0-beta.3"
   }
 }
