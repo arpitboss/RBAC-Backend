@@ -1,18 +1,113 @@
 {
   "users": [
     {
-      "id": "2037",
-      "name": "Arpit",
-      "role": "8794",
+      "name": "Arpit Verma",
+      "role": "f9aa",
+      "status": "Active",
+      "id": "83db"
+    },
+    {
+      "name": "Arth Shukla",
+      "role": "c009",
+      "status": "Inactive",
+      "id": "429d"
+    },
+    {
+      "name": "Shivam Yadav",
+      "role": "9c02",
+      "status": "Active",
+      "id": "9223"
+    },
+    {
+      "name": "Raghib Anees",
+      "role": "9c02",
+      "status": "Active",
+      "id": "3854"
+    },
+    {
+      "id": "4218",
+      "name": "Uditya Prakash",
+      "role": "6137",
+      "status": "Inactive"
+    },
+    {
+      "name": "Abhishek Dwivedi",
+      "role": "9c02",
+      "status": "Active",
+      "id": "0b9e"
+    },
+    {
+      "id": "b143",
+      "name": "Manish Kumar",
+      "role": "cba9",
       "status": "Active"
     }
   ],
   "roles": [
     {
-      "id": "8794",
+      "name": "Node Dev",
+      "id": "6137",
+      "permissions": [
+        "1",
+        "3"
+      ],
+      "headers": {}
+    },
+    {
+      "id": "4a2f",
+      "name": "UI/UX Designer",
+      "permissions": [
+        "1",
+        "3"
+      ],
+      "headers": {}
+    },
+    {
+      "id": "d3c8",
+      "name": "Project Manager",
+      "permissions": [
+        "1",
+        "3"
+      ],
+      "headers": {}
+    },
+    {
+      "id": "6bb4",
+      "name": "Team Lead",
+      "permissions": [
+        "3"
+      ]
+    },
+    {
+      "id": "f9aa",
+      "name": "Flutter Dev",
+      "permissions": [
+        "1",
+        "2",
+        "3"
+      ],
+      "headers": {}
+    },
+    {
+      "id": "9c02",
       "name": "React Dev",
       "permissions": [
-        "2",
+        "1"
+      ]
+    },
+    {
+      "id": "c009",
+      "name": "Data Analyst",
+      "permissions": [
+        "1",
+        "3"
+      ]
+    },
+    {
+      "id": "cba9",
+      "name": "Machine Learning Engineer",
+      "permissions": [
+        "1",
         "3"
       ]
     }

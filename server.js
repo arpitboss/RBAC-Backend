@@ -1,25 +1,12 @@
 const jsonServer = require('json-server');
 const server = jsonServer.create();
-const router = jsonServer.router('db.json');  // You may want to switch to an external DB for persistence
+const router = jsonServer.router('db.json');
 const middlewares = jsonServer.defaults();
 
 server.use(middlewares);
 server.use(jsonServer.bodyParser);
-
-server.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header(
-        'Access-Control-Allow-Headers',
-        'Origin, X-Requested-With, Content-Type, Accept, Authorization, user-id'
-    );
-    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-    if (req.method === 'OPTIONS') {
-        return res.sendStatus(200);  // Handle preflight requests
-    }
-    next();
-});
-
-// Middleware for permission validation
+const cors = require('cors');
+server.use(cors());
 server.use((req, res, next) => {
     const db = router.db;
     const users = db.get('users').value();
@@ -27,6 +14,7 @@ server.use((req, res, next) => {
     const permissions = db.get('permissions').value();
 
     const userId = req.headers['user-id'];
+    console.log(userId);
     const user = users.find((u) => u.id === userId);
 
     if (!user) {
@@ -44,7 +32,9 @@ server.use((req, res, next) => {
     next();
 });
 
-// Export as Vercel Serverless Function handler
-module.exports = (req, res) => {
-    server(req, res);  // Pass request and response to the server
-};
+server.use(router);
+
+const PORT = process.env.PORT || 5000;
+server.listen(PORT, () => {
+    console.log(`JSON Server is running on port ${PORT}`);
+});
